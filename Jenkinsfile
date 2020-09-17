@@ -11,7 +11,7 @@ pipeline {
 	//Run only on dev-node slave
 	agent { label 'simple-web-slave'}
 	parameters {
-		string(name: 'TEST_PORT', defaultValue: '8080', description: 'Port for testing')
+		//string(name: 'TEST_PORT', defaultValue: '8080', description: 'Port for testing')
 		string(name: 'PROD_HOST', defaultValue: 'https://gw.ezmeral.yipintsoigroup.com:10002', description: 'URL for production endpoint testing')
 		string(name: 'PROD_PORT', defaultValue: '30555', description: 'Port for production')
 	}
