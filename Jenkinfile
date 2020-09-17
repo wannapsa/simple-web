@@ -12,7 +12,7 @@ pipeline {
 	agent { label 'gotham-ci'}
 	parameters {
 		string(name: 'TEST_PORT', defaultValue: '8080', description: 'Port for testing')
-		string(name: 'PROD_HOST', defaultValue: 'k8s-7.ezmeral.hpe.lab', description: 'URL for production endpoint testing')
+		string(name: 'PROD_HOST', defaultValue: 'https://gw.ezmeral.yipintsoigroup.com:10002', description: 'URL for production endpoint testing')
 		string(name: 'PROD_PORT', defaultValue: '30555', description: 'Port for production')
 	}
 	stages {
@@ -20,7 +20,7 @@ pipeline {
 			steps {
 				echo "Running ${env.BUILD_ID} on ${env.JENKINS_URL}"
 				dir('/root/simple-web') {
-					echo "Pull latest code from WarotAsawa/simple-web"
+					echo "Pull latest code from wannapsa/simple-web"
 					sh "git pull"
 				}
 			}
@@ -62,9 +62,9 @@ pipeline {
 					echo "Checkout git back to dev branch"
 					sh "git checkout dev"
 					echo "Building production docker image"
-					sh "docker build -t asawakow/simple-web:dev ."
+					sh "docker build -t wannapsa/simple-web:dev ."
 					echo "Push Image to docker.hub"
-					sh "docker push asawakow/simple-web:dev"
+					sh "docker push wannapsa/simple-web:dev"
 				}
 			}
 		}
