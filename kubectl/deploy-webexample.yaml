@@ -4,7 +4,7 @@ metadata:
   labels:
     run: web-app
   name: web-app
-  namespace: tiny-tenant
+  namespace: test-jenkins
 spec:
   replicas: 3
   selector:
@@ -24,7 +24,7 @@ spec:
       - env:
         - name: DOMAIN
           value: namespace
-        image: asawakow/front-cover-web
+        image: wannapsa/front-cover-web
         imagePullPolicy: Always
         name: web-app
         ports:
