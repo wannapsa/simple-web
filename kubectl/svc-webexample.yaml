@@ -6,7 +6,7 @@ metadata:
     run: web-app
     hpecp.hpe.com/hpecp-internal-gateway: "true"
   name: web-app
-  namespace: tiny-tenant
+  namespace: test-jenkins
 spec:
   externalTrafficPolicy: Cluster
   ports:
