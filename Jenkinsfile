@@ -63,9 +63,9 @@ pipeline {
 					echo "Checkout git back to dev branch"
 					sh "git checkout dev"
 					echo "Building production docker image"
-					sh "docker build -t wannapsa/simple-web:dev ."
+					sh "docker build -t wannapsahub/simple-web:dev ."
 					echo "Push Image to docker.hub"
-					sh "docker push wannapsa/simple-web:dev"
+					sh "docker push wannapsahub/simple-web:dev"
 				}
 			}
 		}
