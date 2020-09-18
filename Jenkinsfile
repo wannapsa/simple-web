@@ -13,7 +13,7 @@ pipeline {
 	parameters {
 		//string(name: 'TEST_PORT', defaultValue: '8080', description: 'Port for testing')
 		string(name: 'TEST_PORT', defaultValue: '10002', description: 'Port for testing')
-		string(name: 'PROD_HOST', defaultValue: 'http://gw.ezmeral.yipintsoigroup.com', description: 'URL for production endpoint testing')
+		string(name: 'PROD_HOST', defaultValue: 'gw.ezmeral.yipintsoigroup.com', description: 'URL for production endpoint testing')
 		string(name: 'PROD_PORT', defaultValue: '30555', description: 'Port for production')
 	}
 	stages {
